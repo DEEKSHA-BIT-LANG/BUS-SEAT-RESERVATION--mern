@@ -6,6 +6,7 @@ import Signup from "./pages/Signup";
 import SearchBuses from "./pages/SearchBuses";
 import SeatSelection from "./pages/SeatSelection";
 import BookingConfirmation from "./pages/BookingConfirmation";
+import PaymentSuccess from "./pages/PaymentSuccess";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* 🔥 Payment success page should NOT be protected */}
+        <Route path="/payment-success" element={<PaymentSuccess />} />
       </Routes>
     </BrowserRouter>
   );
